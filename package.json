@@ -1,0 +1,23 @@
+{
+  "name": "Queen-QR",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "DarkWinzo",
+  "license": "ISC",
+  "dependencies": {
+    "@adiwajshing/baileys": "github:jeferssonlemes/Baileys",
+    "chalk": "^5.0.1",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.1",
+    "pastebin-js": "^1.0.6",
+    "path": "^0.12.7",
+    "pino": "^8.1.0",
+    "qrcode": "^1.5.0",
+    "socket.io": "^4.5.1"
+  }
+}
