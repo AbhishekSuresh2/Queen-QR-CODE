@@ -10,7 +10,7 @@
   "author": "DarkWinzo",
   "license": "ISC",
   "dependencies": {
-    "@adiwajshing/baileys": "github:jeferssonlemes/Baileys",
+    "@adiwajshing/baileys": "npm:@whiskeysockets/baileys@^6.0.1",
     "chalk": "^5.0.1",
     "crypto-js": "^4.1.1",
     "express": "^4.18.1",
