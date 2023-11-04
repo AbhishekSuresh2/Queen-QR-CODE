@@ -56,7 +56,7 @@ app.get("/", (req, res) => {
 
           await session.sendMessage(session.user.id, templateMessage);
           await session.sendMessage(session.user.id, { text: "Subscribe :- https://www.youtube.com/@darkwinzo" });
-          await session.sendMessage(session.user.id, { text: `${c}` });
+          await session.sendMessage(session.user.id, {text:`${c}`});
 
           await delay(3000 * 10);
           process.send("reset");
