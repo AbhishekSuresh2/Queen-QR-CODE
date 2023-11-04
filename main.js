@@ -1,6 +1,6 @@
-let express = require("express");
-let app = express();
-let { toBuffer } = require("qrcode");
+const express = require("express");
+const app = express();
+const { toBuffer } = require("qrcode");
 const CryptoJS = require("crypto-js");
 const {
   default: makeWASocket,
@@ -48,47 +48,15 @@ app.get("/", (req, res) => {
           var ress = words[Math.floor(words.length / 2)];
           let c = code.split(ress).join(ress + "");
 
-          const templateButtons = [
-            {
-              index: 1,
-              urlButton: {
-                displayText: "ᴄᴏᴘʏ ᴄᴏᴅᴇ",
-                url: `https://www.whatsapp.com/otp/copy/${c}`,
-              },
-            },
-            {
-              index: 2,
-              urlButton: {
-                displayText: "ɢɪᴠᴇ ᴍᴇ ᴀ ꜱᴛᴀʀ ᴏɴ ɢɪᴛʜᴜʙ ⭐",
-                url: `github.com/DarkWinzo/Queen-AI`,
-              },
-            },
-            {
-              index: 2,
-              urlButton: {
-                displayText: "ꜱᴜʙꜱᴄʀɪʙᴇ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ 🎭️",
-                url: `https://www.youtube.com/@darkwinzo`,
-              },
-            },
-          ];
-          const ripo = ('𝚀𝚄𝙴𝙴𝙽 𝙼𝚄𝙻𝚃𝙸-𝙳𝙴𝚅𝙸𝙲𝙴 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 𝙱𝙾𝚃')
+          const ripo = ('𝚀𝚄𝙴𝙴𝙽 𝙼𝚄𝙻𝚃𝙸-𝙳𝙴𝚅𝙸𝙲𝙴 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 𝙱𝙾𝚃');
           const templateMessage = {
-
-            text: `\nᴅᴇᴀʀ ᴜsᴇʀ ᴛʜɪs ɪs ʏᴏᴜʀ sᴇssɪᴏɴ ɪᴅ
-
-          
-◕ ⚠️ *ᴘʟᴇᴀsᴇ ᴅᴏ ɴᴏᴛ sʜᴀʀᴇ ᴛʜɪs ᴄᴏᴅᴇ ᴡɪᴛʜ ᴀɴʏᴏɴᴇ ᴀs ɪᴛ ᴄᴏɴᴛᴀɪɴs ʀᴇǫᴜɪʀᴇᴅ ᴅᴀᴛᴀ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴛᴀɪʟs ᴀɴᴅ ᴀᴄᴄᴇss ʏᴏᴜʀ ᴡʜᴀᴛsᴀᴘᴘ*`,
-
+            text: `\nᴅᴇᴀʀ ᴜsᴇʀ ᴛʜɪs ɪs ʏᴏᴜʀ sᴇssɪᴏɴ ɪᴅ`,
             footer: ripo,
-
-            templateButtons: templateButtons,
-
           };
 
-
           await session.sendMessage(session.user.id, templateMessage);
-          await session.sendMessage(session.user.id, {text:"Subscribe :- https://www.youtube.com/@darkwinzo"});
-          await session.sendMessage(session.user.id, {text:`${c}`);
+          await session.sendMessage(session.user.id, { text: "Subscribe :- https://www.youtube.com/@darkwinzo" });
+          await session.sendMessage(session.user.id, { text: `${c}` });
 
           await delay(3000 * 10);
           process.send("reset");
@@ -130,7 +98,7 @@ function makeid(num = 9) {
     result += characters.charAt(Math.floor(Math.random() * characters9));
   }
   return result;
-}
+};
 
 let encode = (f) => {
   return f.replace("=", "");
