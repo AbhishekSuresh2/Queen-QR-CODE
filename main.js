@@ -7,7 +7,7 @@ const {
   useSingleFileAuthState,
   Browsers,
   delay,
-} = require("@adiwajshing/baileys");
+} = require("@whiskeysockets/baileys");
 
 const pino = require("pino");
 let PORT = process.env.PORT || 3030;
